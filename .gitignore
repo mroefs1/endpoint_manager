@@ -31,3 +31,19 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+
+# Build output
+/bin/
+
+# Secrets and key material (Phase 6 onward)
+*.key
+*.pem
+*.pfx
+*.p12
+.env.*
+
+# Local server data (Phase 5)
+*.db
+*.db-journal
+*.db-wal
+*.sqlite
