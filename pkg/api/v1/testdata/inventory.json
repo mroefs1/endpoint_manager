@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 1,
+  "agentVersion": "0.1.0",
+  "machineId": "3f2b8c1e-7a4d-4e9b-9c2a-5d8e1f6a0b47",
+  "hostname": "WS-0142",
+  "collectedAt": "2026-11-05T14:30:00Z",
+  "os": {
+    "productName": "Windows 11 Pro",
+    "editionId": "Professional",
+    "displayVersion": "23H2",
+    "majorVersion": 10,
+    "minorVersion": 0,
+    "buildNumber": 22631,
+    "ubr": 4317,
+    "architecture": "amd64",
+    "productType": "workstation",
+    "fqdn": "WS-0142.corp.example.com",
+    "joinType": "hybrid",
+    "joinName": "CORP",
+    "lastBootTime": "2026-11-03T07:58:12Z",
+    "installDate": "2025-10-14T16:22:05Z"
+  },
+  "hardware": {
+    "manufacturer": "Dell Inc.",
+    "model": "Latitude 7440",
+    "serialNumber": "7HQK2Z3",
+    "smbiosUuid": "4C4C4544-0048-5110-804B-B7C04F325A33",
+    "bios": {
+      "vendor": "Dell Inc.",
+      "version": "1.14.0",
+      "releaseDate": "2024-09-10"
+    },
+    "cpu": {
+      "name": "13th Gen Intel(R) Core(TM) i7-1365U",
+      "sockets": 1,
+      "cores": 10,
+      "logicalProcessors": 12,
+      "baseClockMhz": 1800
+    },
+    "memory": {
+      "installedBytes": 17179869184,
+      "totalBytes": 16893616128,
+      "availableBytes": 8423456768
+    }
+  },
+  "disks": [
+    {
+      "root": "C:\\",
+      "type": "fixed",
+      "label": "OS",
+      "fileSystem": "NTFS",
+      "volumeSerial": "A4F2-19C7",
+      "totalBytes": 510770802688,
+      "freeBytes": 214748364800
+    },
+    {
+      "root": "E:\\",
+      "type": "removable",
+      "label": "",
+      "fileSystem": "exFAT",
+      "volumeSerial": "5E21-0B3D",
+      "totalBytes": 61530439680,
+      "freeBytes": 0
+    }
+  ],
+  "networkAdapters": [
+    {
+      "friendlyName": "Ethernet",
+      "description": "Intel(R) Ethernet Connection (16) I219-LM",
+      "macAddress": "a4:bb:6d:12:34:56",
+      "status": "up",
+      "type": "ethernet",
+      "linkSpeedBps": 1000000000,
+      "dhcpEnabled": true,
+      "dnsSuffix": "corp.example.com",
+      "addresses": [
+        "10.20.30.142/24",
+        "2001:db8:1234:5678::142/64",
+        "fe80::a1b2:c3d4:e5f6:1234/64"
+      ],
+      "gateways": [
+        "10.20.30.1"
+      ],
+      "dnsServers": [
+        "10.20.0.10",
+        "10.20.0.11"
+      ]
+    },
+    {
+      "friendlyName": "Wi-Fi",
+      "description": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "macAddress": "4c:03:4f:ab:cd:ef",
+      "status": "down",
+      "type": "wifi",
+      "linkSpeedBps": 0,
+      "dhcpEnabled": true,
+      "dnsSuffix": "",
+      "addresses": [],
+      "gateways": [],
+      "dnsServers": []
+    }
+  ],
+  "sessions": [
+    {
+      "id": 1,
+      "userName": "jsmith",
+      "domain": "CORP",
+      "state": "active",
+      "stationName": "Console",
+      "clientName": "",
+      "logonTime": "2026-11-05T08:02:47Z"
+    },
+    {
+      "id": 2,
+      "userName": "adoe",
+      "domain": "AzureAD",
+      "state": "disconnected",
+      "stationName": "",
+      "clientName": "WS-0098",
+      "logonTime": "2026-11-04T16:41:09Z"
+    },
+    {
+      "id": 3,
+      "userName": "mroefs",
+      "domain": "CORP",
+      "state": "connected",
+      "stationName": "RDP-Tcp#7",
+      "clientName": "WS-0211"
+    }
+  ],
+  "services": [
+    {
+      "name": "wuauserv",
+      "displayName": "Windows Update",
+      "state": "running",
+      "startType": "manual",
+      "pid": 1288,
+      "account": "LocalSystem"
+    },
+    {
+      "name": "Dnscache",
+      "displayName": "DNS Client",
+      "state": "running",
+      "startType": "automatic",
+      "pid": 2044,
+      "account": "NT AUTHORITY\\NetworkService"
+    },
+    {
+      "name": "MapsBroker",
+      "displayName": "Downloaded Maps Manager",
+      "state": "stopped",
+      "startType": "automaticDelayed",
+      "pid": 0,
+      "account": "NT AUTHORITY\\NetworkService"
+    },
+    {
+      "name": "RemoteRegistry",
+      "displayName": "Remote Registry",
+      "state": "stopped",
+      "startType": "disabled",
+      "pid": 0,
+      "account": "NT AUTHORITY\\LocalService"
+    },
+    {
+      "name": "BackupAgent",
+      "displayName": "Example Backup Agent",
+      "state": "startPending",
+      "startType": "automatic",
+      "pid": 6120,
+      "account": "CORP\\svc-backup"
+    }
+  ],
+  "processes": [
+    {
+      "pid": 4,
+      "parentPid": 0,
+      "name": "System",
+      "imagePath": "",
+      "userName": "SYSTEM",
+      "domain": "NT AUTHORITY",
+      "sessionId": 0,
+      "startTime": "2026-11-03T07:58:12Z"
+    },
+    {
+      "pid": 140,
+      "parentPid": 4,
+      "name": "Secure System",
+      "imagePath": "",
+      "userName": "",
+      "domain": "",
+      "sessionId": 0
+    },
+    {
+      "pid": 1288,
+      "parentPid": 880,
+      "name": "svchost.exe",
+      "imagePath": "C:\\Windows\\System32\\svchost.exe",
+      "userName": "SYSTEM",
+      "domain": "NT AUTHORITY",
+      "sessionId": 0,
+      "startTime": "2026-11-03T07:58:19Z"
+    },
+    {
+      "pid": 7432,
+      "parentPid": 7380,
+      "name": "explorer.exe",
+      "imagePath": "C:\\Windows\\explorer.exe",
+      "userName": "jsmith",
+      "domain": "CORP",
+      "sessionId": 1,
+      "startTime": "2026-11-05T08:02:55Z"
+    },
+    {
+      "pid": 9816,
+      "parentPid": 7432,
+      "name": "chrome.exe",
+      "imagePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "userName": "jsmith",
+      "domain": "CORP",
+      "sessionId": 1,
+      "startTime": "2026-11-05T08:15:31Z"
+    }
+  ],
+  "software": [
+    {
+      "name": "Google Chrome",
+      "version": "130.0.6723.92",
+      "publisher": "Google LLC",
+      "installDate": "2026-10-29",
+      "estimatedSizeBytes": 0,
+      "architecture": "amd64",
+      "softwareScope": "machine"
+    },
+    {
+      "name": "7-Zip 24.08 (x64)",
+      "version": "24.08",
+      "publisher": "Igor Pavlov",
+      "installDate": "2025-11-02",
+      "estimatedSizeBytes": 6055936,
+      "architecture": "amd64",
+      "softwareScope": "machine"
+    },
+    {
+      "name": "Adobe Acrobat Reader",
+      "version": "24.004.20220",
+      "publisher": "Adobe",
+      "installDate": "",
+      "estimatedSizeBytes": 1073741824,
+      "architecture": "x86",
+      "softwareScope": "machine"
+    },
+    {
+      "name": "Zoom Workplace",
+      "version": "6.2.5 (50149)",
+      "publisher": "Zoom Video Communications, Inc.",
+      "installDate": "2026-09-17",
+      "estimatedSizeBytes": 314572800,
+      "architecture": "unknown",
+      "softwareScope": "user",
+      "userSid": "S-1-5-21-1004336348-1177238915-682003330-1105"
+    }
+  ],
+  "health": {
+    "rebootReasons": [
+      "windowsUpdate",
+      "fileRename"
+    ],
+    "firewall": {
+      "domain": true,
+      "private": true,
+      "public": false
+    },
+    "uacEnabled": true,
+    "secureBoot": "on",
+    "firmwareType": "uefi"
+  },
+  "collectors": [
+    { "name": "os", "durationMs": 12 },
+    { "name": "hardware", "durationMs": 48 },
+    { "name": "disks", "durationMs": 9 },
+    { "name": "networkAdapters", "durationMs": 21 },
+    { "name": "sessions", "durationMs": 6 },
+    { "name": "services", "durationMs": 87 },
+    { "name": "processes", "durationMs": 134 },
+    { "name": "software", "durationMs": 211 },
+    { "name": "health", "durationMs": 15 }
+  ]
+}

@@ -8,9 +8,8 @@ import "time"
 type Process struct {
 	// PID is the process ID. Windows reuses PIDs after a process
 	// exits, so use PID together with StartTime to tell processes
-	// apart across reports. 0 is the System Idle Process and 4 is
-	// the System process. 0 is intentionally omitted, similarly
-	// to session.go
+	// apart across reports.
+	// The System Idle Process (PID 0) is not included; PID 4 is the System process.
 	PID uint32 `json:"pid"`
 	// ParentPID is the PID of the process that created this one, from
 	// th32ParentProcessID. Windows does not update it when the parent
@@ -23,7 +22,7 @@ type Process struct {
 	Name string `json:"name"`
 	// ImagePath is the full path of the executable, e.g.
 	// "C:\Windows\System32\svchost.exe", from
-	// QueryFullProcessImageName. Empty for the System Idle Process,
+	// QueryFullProcessImageName. Empty for the
 	// the System process and processes the agent cannot open.
 	ImagePath string `json:"imagePath"`
 	// UserName is the account name the process runs as, without the
@@ -40,7 +39,7 @@ type Process struct {
 	// SessionID is the session the process runs in, from
 	// ProcessIdToSessionId. 0 is the services session; match it
 	// against Session.ID to find the user session a process belongs
-	// to.
+	// to. Session 0 is not in the list.
 	SessionID uint32 `json:"sessionId"`
 	// StartTime is when the process started, in UTC, from the creation
 	// time reported by GetProcessTimes. Omitted if the process cannot

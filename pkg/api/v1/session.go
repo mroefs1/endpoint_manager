@@ -40,20 +40,19 @@ const (
 )
 
 // Session is one Windows logon session, from WTSEnumerateSessionsEx.
-// Listener sessions (e.g. "RDP-Tcp") are not included. Session 0 is
-// where services run and normally has no user.
+// Listener sessions (e.g. "RDP-Tcp") are not included. Only sessions with a logged-on user are included,
+// so session 0 (services) and listener sessions never appear.
 type Session struct {
 	// ID is the session ID. 0 is the services session; user sessions
 	// start at 1. IDs are reused after a session ends, so use ID
 	// together with LogonTime to tell sessions apart across reports.
-	// Session 0 is intentionally omitted, similarly to process.go
 	ID uint32 `json:"id"`
 	// UserName is the logged-on user's account name, without the
-	// domain, e.g. "jsmith". Empty if no user is logged on.
+	// domain, e.g. "jsmith".
 	UserName string `json:"userName"`
 	// Domain is the user's domain: the NetBIOS domain name for domain
 	// accounts, the computer name for local accounts, or "AzureAD"
-	// for Entra ID accounts. Empty if no user is logged on.
+	// for Entra ID accounts.
 	Domain string `json:"domain"`
 	// State is the session's connection state.
 	State SessionState `json:"state"`
@@ -66,7 +65,6 @@ type Session struct {
 	// sessions.
 	ClientName string `json:"clientName"`
 	// LogonTime is when the user logged on, in UTC, from
-	// WTSQuerySessionInformation (WTSSessionInfo). Omitted if no user
-	// is logged on.
+	// WTSQuerySessionInformation (WTSSessionInfo).
 	LogonTime time.Time `json:"logonTime,omitzero"`
 }

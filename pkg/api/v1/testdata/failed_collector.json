@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "agentVersion": "0.1.0",
+  "machineId": "9a7e3d52-1c04-4b6f-8e2d-0f5b7c9a4e13",
+  "hostname": "FILESRV01",
+  "collectedAt": "2026-11-05T15:05:00Z",
+  "os": {
+    "productName": "Windows Server 2022 Standard",
+    "editionId": "ServerStandard",
+    "displayVersion": "21H2",
+    "majorVersion": 10,
+    "minorVersion": 0,
+    "buildNumber": 20348,
+    "ubr": 2762,
+    "architecture": "amd64",
+    "productType": "server",
+    "fqdn": "FILESRV01",
+    "joinType": "workgroup",
+    "joinName": "WORKGROUP",
+    "lastBootTime": "2026-10-12T03:14:40Z"
+  },
+  "hardware": null,
+  "disks": [
+    {
+      "root": "C:\\",
+      "type": "fixed",
+      "label": "",
+      "fileSystem": "NTFS",
+      "volumeSerial": "0C6E-7A21",
+      "totalBytes": 255467474944,
+      "freeBytes": 41875931136
+    },
+    {
+      "root": "D:\\",
+      "type": "fixed",
+      "label": "Shares",
+      "fileSystem": "ReFS",
+      "volumeSerial": "B81D-3F90",
+      "totalBytes": 3998614552576,
+      "freeBytes": 1205022720000
+    }
+  ],
+  "networkAdapters": [
+    {
+      "friendlyName": "Ethernet0",
+      "description": "Intel(R) Ethernet Controller I210",
+      "macAddress": "00:1b:21:3c:4d:5e",
+      "status": "up",
+      "type": "ethernet",
+      "linkSpeedBps": 1000000000,
+      "dhcpEnabled": false,
+      "dnsSuffix": "",
+      "addresses": [
+        "192.168.10.20/24"
+      ],
+      "gateways": [
+        "192.168.10.1"
+      ],
+      "dnsServers": [
+        "192.168.10.1",
+        "1.1.1.1"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "id": 2,
+      "userName": "Administrator",
+      "domain": "FILESRV01",
+      "state": "active",
+      "stationName": "RDP-Tcp#12",
+      "clientName": "WS-0142",
+      "logonTime": "2026-11-05T14:48:22Z"
+    }
+  ],
+  "services": [
+    {
+      "name": "LanmanServer",
+      "displayName": "Server",
+      "state": "running",
+      "startType": "automatic",
+      "pid": 1132,
+      "account": "LocalSystem"
+    },
+    {
+      "name": "wuauserv",
+      "displayName": "Windows Update",
+      "state": "stopped",
+      "startType": "disabled",
+      "pid": 0,
+      "account": "LocalSystem"
+    }
+  ],
+  "processes": [
+    {
+      "pid": 4,
+      "parentPid": 0,
+      "name": "System",
+      "imagePath": "",
+      "userName": "SYSTEM",
+      "domain": "NT AUTHORITY",
+      "sessionId": 0,
+      "startTime": "2026-10-12T03:14:40Z"
+    },
+    {
+      "pid": 1132,
+      "parentPid": 712,
+      "name": "svchost.exe",
+      "imagePath": "C:\\Windows\\System32\\svchost.exe",
+      "userName": "SYSTEM",
+      "domain": "NT AUTHORITY",
+      "sessionId": 0,
+      "startTime": "2026-10-12T03:14:51Z"
+    },
+    {
+      "pid": 5608,
+      "parentPid": 5540,
+      "name": "explorer.exe",
+      "imagePath": "C:\\Windows\\explorer.exe",
+      "userName": "Administrator",
+      "domain": "FILESRV01",
+      "sessionId": 2,
+      "startTime": "2026-11-05T14:48:30Z"
+    }
+  ],
+  "software": [
+    {
+      "name": "Veeam Agent for Microsoft Windows",
+      "version": "6.1.2.134",
+      "publisher": "Veeam Software Group GmbH",
+      "installDate": "2025-03-08",
+      "estimatedSizeBytes": 524288000,
+      "architecture": "amd64",
+      "softwareScope": "machine"
+    }
+  ],
+  "health": {
+    "rebootReasons": [],
+    "firewall": {
+      "domain": true,
+      "private": false,
+      "public": true
+    },
+    "uacEnabled": false,
+    "secureBoot": "unsupported",
+    "firmwareType": "bios"
+  },
+  "collectors": [
+    { "name": "os", "durationMs": 14 },
+    { "name": "hardware", "error": "read SMBIOS table: GetSystemFirmwareTable(RSMB): The data area passed to a system call is too small.", "durationMs": 3 },
+    { "name": "disks", "durationMs": 11 },
+    { "name": "networkAdapters", "durationMs": 8 },
+    { "name": "sessions", "durationMs": 5 },
+    { "name": "services", "durationMs": 96 },
+    { "name": "processes", "durationMs": 72 },
+    { "name": "software", "durationMs": 58 },
+    { "name": "health", "durationMs": 19 }
+  ]
+}

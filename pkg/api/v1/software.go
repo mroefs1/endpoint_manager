@@ -1,16 +1,16 @@
 package v1
 
-// Scope is where a program is installed, based on which registry
+// SoftwareScope is where a program is installed, based on which registry
 // hive its Uninstall entry was found in.
-type Scope string
+type SoftwareScope string
 
 const (
 	// SoftwareScopeMachine is a machine-wide install, found under
 	// HKLM and available to all users.
-	SoftwareScopeMachine Scope = "machine"
+	SoftwareScopeMachine SoftwareScope = "machine"
 	// SoftwareScopeUser is a per-user install, found under a user's
 	// hive in HKEY_USERS and available only to that user.
-	SoftwareScopeUser Scope = "user"
+	SoftwareScopeUser SoftwareScope = "user"
 )
 
 // Software is one installed program, as listed in Apps & features
@@ -47,13 +47,14 @@ type Software struct {
 	// amd64 or arm64 for the native view, x86 for WOW6432Node. It
 	// reflects where the installer registered the program, which
 	// usually but not always matches the program's binaries.
+	// Unknown for per-user installs, which have no separate 32-bit registry view
 	Architecture Architecture `json:"architecture"`
-	// Scope is where the program is installed: "machine" for entries
+	// SoftwareScope is where the program is installed: "machine" for entries
 	// under HKLM, available to all users, or "user" for entries under
 	// a user's hive, available only to that user.
-	Scope Scope `json:"scope"`
+	SoftwareScope SoftwareScope `json:"softwareScope"`
 	// UserSID identifies the user whose hive the entry was found in.
-	// Set only when Scope is "user". Only hives loaded at collection
+	// Set only when SoftwareScope is "user". Only hives loaded at collection
 	// time are read, so per-user installs of users who are not
 	// logged on are usually missing.
 	UserSID string `json:"userSid,omitempty"`

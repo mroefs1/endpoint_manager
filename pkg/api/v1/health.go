@@ -85,7 +85,7 @@ type HealthInfo struct {
 	// no restart is pending.
 	RebootReasons []RebootReason `json:"rebootReasons"`
 	// Firewall is the firewall state for each network profile.
-	Firewall Firewall `json:"firewallProfiles"`
+	Firewall Firewall `json:"firewall"`
 	// UACEnabled is whether User Account Control is on, from the
 	// EnableLUA value under
 	// HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System.
